@@ -18,19 +18,37 @@ streamlit run app.py
 
 The app will open in your browser at `http://localhost:8501`
 
-Features:
+## Features
 
 - **👤 Recommend for User** - Get top-N movie recommendations for any user
 - **🎥 Find Similar Movies** - Discover movies similar to your favorite film
 
-Try these popular movies:
+## Screenshots
+
+### User Recommendations Tab
+![User Recommendations](screenshots/user_recommendations.png)
+
+### Similar Movies Tab
+![Similar Movies](screenshots/similar_movies.png)
+
+## Try These Popular Movies
 - Toy Story
 - The Matrix
 - Avatar
 - Inception
 - Star Wars
+- Forrest Gump
+- Jurassic Park
 
-Notes:
-- This is an in-memory item-based collaborative filtering system using cosine similarity
-- It recommends based on user ratings and movie similarity patterns
-- For production use, consider using sparse representations, caching, and persistence
+## How It Works
+
+This system uses **Item-Based Collaborative Filtering**:
+- Analyzes user ratings to find movie similarities
+- Recommends movies based on similar users' preferences
+- Uses cosine similarity to measure movie-to-movie relationships
+
+## Notes
+
+- In-memory collaborative filtering using scikit-learn
+- Dataset: 9,742 movies with 100,838 ratings
+- For production use, consider: sparse representations, caching, database persistence, and incremental model updates
